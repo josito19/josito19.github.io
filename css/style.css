@@ -1,0 +1,97 @@
+﻿:root {
+    --bg-gradient: linear-gradient(135deg, #74ABE2 0%, #5563DE 100%);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --border-color: rgba(255, 255, 255, 0.25);
+    --text-color: #fff;
+    --accent-color: #ffd166;
+    --hover-color: #ffb703;
+    --font-main: 'Poppins', 'Segoe UI', sans-serif;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    font-family: var(--font-main);
+    color: var(--text-color);
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    padding: 2rem 3rem;
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3em;
+    color: var(--accent-color);
+}
+
+h2 {
+    font-weight: 400;
+    color: #e0e0e0;
+    margin-top: 0;
+}
+
+h3 {
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 0.3em;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+li {
+    margin: 0.7em 0;
+}
+
+a {
+    color: var(--accent-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    a:hover {
+        color: var(--hover-color);
+        text-shadow: 0 0 8px rgba(255, 209, 102, 0.8);
+    }
+
+footer {
+    font-size: 0.9em;
+    color: #e0e0e0;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
